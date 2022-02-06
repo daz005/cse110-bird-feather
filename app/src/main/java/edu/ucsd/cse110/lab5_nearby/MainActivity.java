@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onLost(@NonNull Message message) {
-                super.onFound(message);
+                super.onLost(message);
 
                 Log.d(TAG, "Lost sight of message: " + new String(message.getContent()));
             }
