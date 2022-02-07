@@ -63,50 +63,6 @@ public class FakedMessageListener extends MessageListener{
         }, 0, frequency, TimeUnit.SECONDS);
     };
 
-
 }
-
-
-
-//
-//class FakedBluetoothListener extends MessageListener{
-//
-//    private final MessageListener messageListener;
-//    private final ScheduledExecutorService excutor;
-//
-//    public FakedBluetoothListener(MessageHandler messageHandler){
-//
-//        int frequency = 3;
-//        String messageStr = "hello Derek!";
-//
-//        this.messageListener =new MessageListener() {
-//
-//            @Override
-//            public void onFound(@NonNull Message message) {
-//                super.onFound(message);
-//
-//                messageHandler.onFound(message);
-//            }
-//
-//            @Override
-//            public void onLost(@NonNull Message message) {
-//                super.onLost(message);
-//
-//                messageHandler.onLost(message);
-//            }
-//        };
-//
-//
-//        this.excutor = Executors.newSingleThreadScheduledExecutor();
-//
-//        excutor.scheduleAtFixedRate(()->{
-//            Message message = new Message( messageStr.getBytes(StandardCharsets.UTF_8) );
-//            this.messageListener.onFound(message);
-//            this.messageListener.onLost(message);
-//        }, 0, frequency, TimeUnit.SECONDS);
-//
-//    };
-//
-//}
 
 

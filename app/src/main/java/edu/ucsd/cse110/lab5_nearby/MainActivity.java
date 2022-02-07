@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity implements FakedMessageListe
         this.messageListener.broadCastMessage(text);
         editText.setText("");
 
+
         //this.messageListener.broadCastMessage("This is from derek!");
     }
 
