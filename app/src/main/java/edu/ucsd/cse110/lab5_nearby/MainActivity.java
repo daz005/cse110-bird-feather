@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 
 //import com.google.android.gms.nearby.messages.Message;
 
@@ -30,7 +31,12 @@ public class MainActivity extends AppCompatActivity implements FakedMessageListe
     // broadCast Message
     public void onMyTestButtonClicked(View view) {
 
-        this.messageListener.broadCastMessage("This is from derek!");
+        EditText editText = findViewById(R.id.editTextTextId);
+        String text = editText.getText().toString();
+        this.messageListener.broadCastMessage(text);
+        editText.setText("");
+
+        //this.messageListener.broadCastMessage("This is from derek!");
     }
 
     // found bluetooth message:
